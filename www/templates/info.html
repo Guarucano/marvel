@@ -1,0 +1,30 @@
+<div ng-controller="infoCtrl">
+	<ion-view view-title="Detalles del Comic">
+
+	
+		<ion-content>
+
+		<div class="list card">
+	
+  	<div class="item item-avatar">
+	    <img ng-src="{{comic.thumbnail.path}}/standard_small.jpg"/>
+	    <h2>{{comic.title}}</h2>
+	    <p>Fecha de Salida:</p>
+	    <p>{{comic.dates['0'].date}}</p>
+	  </div>
+
+	  <div class="item item-image">
+	    <img ng-src="{{comic.images['0'].path}}/portrait_incredible.jpg">
+	  </div>
+		<p align="justify">{{comic.description}}</p>
+		
+		<button class="button button-block button-outline button-dark icon ion-android-open">
+		  Visitar Página
+		</button>
+
+
+	</div>	
+
+		</ion-content>
+	</ion-view>	
+</div>

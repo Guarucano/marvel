@@ -1,0 +1,16 @@
+<div ng-controller="BuscarTituloCtrl">
+	<ion-nav-bar class="bar-stable">
+          <ion-nav-back-button></ion-nav-back-button> 
+      </ion-nav-bar>
+	<ion-view view-title="Resultado por Título">
+		<ion-content>	
+				 <ion-list>
+		          <ion-item class="item-thumbnail-left" ng-repeat="infocomic in comicstitulo" href="/#/info/{{infocomic.id}}">
+		            <img ng-src="{{infocomic.thumbnail.path}}/standard_small.jpg"/>
+		            <h2 class="infocomic-title">{{infocomic.title}}</h2>
+		            <p class="infocomic-description">{{infocomic.description | limitTo: 55}}{{infocomic.description.length > 55 ? '&hellip;' : '' }}</p>
+		          </ion-item>
+		        </ion-list>
+		</ion-content>
+	</ion-view>	
+</div>
